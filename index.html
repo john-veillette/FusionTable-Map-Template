@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='en'>
   <head>
-    <title>Searchable Map Template Demo</title>
+    <title>Washington Park Resource Map</title>
     <meta charset='utf-8' />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta content='' name='description' />
@@ -23,20 +23,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class='navbar-brand' href='index.html'>Searchable Map Template</a>
+          <a class='navbar-brand' href='index.html'>Washgington Park Resources</a>
         </div>
         <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li class='active'><a href="index.html">Map</a></li>
-            <li><a href="about.html">About</a></li>
-          </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
     <div class='container-fluid'>
       <div class='row'>
         <div class='col-md-4'>
-          <p>This is a demo of <a href='http://derekeder.com'>Derek Eder's</a> <a href='http://derekeder.com/searchable_map_template/'>Searchable Map Template</a> using Google <a href='http://support.google.com/fusiontables/answer/2571232?hl=en&ref_topic=1652595'>Fusion Tables</a>. Use this section to give a little context to your map.</p>
+          <p>An asset map consisting of every storefront recorded by MAPSCorps, a HealtheRX project at the University of Chicago.</p>
           <div class='well'>
             <h4>
               Address <small>(<a id='find_me' href='#'>find me</a>)</small>
@@ -57,25 +53,116 @@
             </p>
 
             <br />
-            <h4>Custom filters and views</h4>
-            <p>Take a look at the <a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples'>wiki</a> to see how to add your own custom filters and views like:</p>
-            <div class='row'>
-              <div class='col-md-6'>
-                <ul>
-                  <li><a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples#wiki-checkboxes'>Checkboxes</a></li>
-                  <li><a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples#wiki-radiobuttons'>Radio buttons</a></li>
-                  <li><a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples#wiki-drop-down-lists'>Drop down lists</a></li>
-                  <li><a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples#wiki-textsearches'>Text searches</a></li>
-                </ul>
-              </div>
-              <div class='col-md-6'>
-                <ul>
-                  <li><a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples#wiki-sliders'>Sliders</a></li>
-                  <li><a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples#wiki-date-sliders'>Date sliders</a></li>
-                  <li><a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/List-search-results'>Results lists</a></li>
-                </ul>
-              </div>
-            </div>
+            <h4>
+              Organization Type
+            </h4>
+            <ul class='inputs-list unstyled'>
+             <li>
+              <label class='checkbox inline'>
+                 <input type='checkbox' id='cbType1' />
+                 <span class='filter-box filter-blue'></span>
+                Church
+              </label>
+            </li>
+            <li>
+              <label class='checkbox inline'>
+                <input type='checkbox' id='cbType2' />
+                <span class='filter-box filter-green'></span>
+                Soc Service & Polit Advoc
+              </label>
+            </li>
+            <li>
+              <label class='checkbox inline'>
+                <input type='checkbox' id='cbType3' />
+                <span class='filter-box filter-yellow'></span>
+                Arts & Entertainment
+              </label>
+            </li>
+            <li>
+              <label class='checkbox inline'>
+                <input type='checkbox' id='cbType4' />
+                <span class='filter-box filter-purple'></span>
+                School & Childcare
+              </label>
+            </li>
+            <li>
+              <label class='checkbox inline'>
+                <input type='checkbox' id='cbType5' />
+                <span class='filter-box filter-red'></span>
+                Personal Service
+              </label>
+            </li>
+            <li>
+              <label class='checkbox inline'>
+                <input type='checkbox' id='cbType6' />
+                <span class='filter-box filter-red'></span>
+                Health Service
+              </label>
+            </li>
+            <li>
+              <label class='checkbox inline'>
+                <input type='checkbox' id='cbType7' />
+                <span class='filter-box filter-red'></span>
+                Public Services
+              </label>
+            </li>
+            <li>
+              <label class='checkbox inline'>
+                <input type='checkbox' id='cbType8' />
+                <span class='filter-box filter-red'></span>
+                Dining
+              </label>
+            </li>
+            <li>
+              <label class='checkbox inline'>
+                <input type='checkbox' id='cbType9' />
+                <span class='filter-box filter-red'></span>
+                Retail
+              </label>
+            </li>
+            <li>
+              <label class='checkbox inline'>
+                <input type='checkbox' id='cbType10' />
+                <span class='filter-box filter-red'></span>
+                Trade Service
+              </label>
+            </li>
+            <li>
+              <label class='checkbox inline'>
+                <input type='checkbox' id='cbType11' />
+                <span class='filter-box filter-red'></span>
+                Whlsl, Stor & Transit
+              </label>
+            </li>
+            <li>
+              <label class='checkbox inline'>
+                <input type='checkbox' id='cbType12' />
+                <span class='filter-box filter-red'></span>
+                Programmed Residential
+              </label>
+            </li>
+            <li>
+              <label class='checkbox inline'>
+                <input type='checkbox' id='cbType13' />
+                <span class='filter-box filter-red'></span>
+                FIRE
+              </label>
+            </li>
+            <li>
+              <label class='checkbox inline'>
+                <input type='checkbox' id='cbType14' />
+                <span class='filter-box filter-red'></span>
+                Fitness
+              </label>
+            </li>
+            <li>
+              <label class='checkbox inline'>
+                <input type='checkbox' id='cbType15' />
+                <span class='filter-box filter-red'></span>
+                Other
+              </label>
+            </li>
+          </ul>
             <br />
             <a class='btn btn-primary' id='search' href='#'>
               <i class='glyphicon glyphicon-search'></i>
@@ -85,6 +172,7 @@
               <i class='glyphicon glyphicon-repeat'></i>
               Reset
             </a>
+            <div id='results_list'></div>
           </div>
           <div class='alert alert-info' id='result_box' ><strong id='result_count'></strong></div>
         </div>
@@ -119,10 +207,10 @@
         
         $(function() {
           var myMap = new MapsLib({
-            fusionTableId:      "1m4Ez9xyTGfY2CU6O-UgEcPzlS0rnzLU93e4Faa0",
-            googleApiKey:       "AIzaSyA3FQFrNr5W2OEVmuENqhb2MBB2JabdaOY",
-            locationColumn:     "geometry",
-            map_center:         [41.8781136, -87.66677856445312],
+            fusionTableId:      "11wpNO4UMaY2zZ8QnQrsJx-U_IPU98WeDH_o6NO9L",
+            googleApiKey:       "AIzaSyBzFPuR1kDOX0A5Z5_nUVZvHEowY9R_280",
+            locationColumn:     "latitude",
+            map_center:         [41.794470, -87.620945],
             locationScope:      "chicago"
           });
 

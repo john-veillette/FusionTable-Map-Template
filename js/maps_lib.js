@@ -99,6 +99,8 @@
         self.fusionTable = self.searchrecords;
         self.searchrecords.setMap(map);
         self.getCount(whereClause);
+        self.getList(whereClause);
+
     };
 
 
@@ -163,6 +165,24 @@
         self.whereClause = self.locationColumn + " not equal to ''";
         
         //-----custom filters-----
+        var type_column = "'orgtypemain'";
+        var tempWhereClause = [];
+        if ( $("#cbType1").is(':checked')) tempWhereClause.push("Church");
+        if ( $("#cbType2").is(':checked')) tempWhereClause.push("Soc Serv & Polit Advoc");
+        if ( $("#cbType3").is(':checked')) tempWhereClause.push("Arts & Entertainment");
+        if ( $("#cbType4").is(':checked')) tempWhereClause.push("School & Childcare");
+        if ( $("#cbType5").is(':checked')) tempWhereClause.push("Personal Service");
+        if ( $("#cbType6").is(':checked')) tempWhereClause.push("Health Service");
+        if ( $("#cbType7").is(':checked')) tempWhereClause.push("Public Services");
+        if ( $("#cbType8").is(':checked')) tempWhereClause.push("Dining");
+        if ( $("#cbType9").is(':checked')) tempWhereClause.push("Retail");
+        if ( $("#cbType10").is(':checked')) tempWhereClause.push("Trade Service");
+        if ( $("#cbType11").is(':checked')) tempWhereClause.push("Whlsl, Stor & Transit");
+        if ( $("#cbType12").is(':checked')) tempWhereClause.push("Programmed Residential");
+        if ( $("#cbType13").is(':checked')) tempWhereClause.push("FIRE");
+        if ( $("#cbType14").is(':checked')) tempWhereClause.push("Fitness");
+        if ( $("#cbType15").is(':checked')) tempWhereClause.push("Other");
+        self.whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";
         //-----end of custom filters-----
 
         self.getgeoCondition(address, function (geoCondition) {
@@ -298,6 +318,54 @@
         });
         $("#result_box").fadeIn();
     };
+
+    MapsLib.prototype.getList = function(whereClause) {
+    var self = this;
+    var selectColumns = 'orgtypetext, address, street, zip, orgtypetext';
+
+    self.query({ 
+      select: selectColumns, 
+      where: whereClause 
+    }, function(response) { 
+      self.displayList(response);
+    });
+  },
+
+  MapsLib.prototype.displayList = function(json) {
+    var self = this;
+
+    var data = json['rows'];
+    var template = '';
+
+    var results = $('#results_list');
+    results.hide().empty(); //hide the existing list and empty it out first
+
+    if (data == null) {
+      //clear results list
+      results.append("<li><span class='lead'>No results found</span></li>");
+    }
+    else {
+      for (var row in data) {
+        template = "\
+          <div class='row-fluid item-list'>\
+            <div class='span12'>\
+              <strong>" + data[row][0] + "</strong>\
+              <br />\
+              " + data[row][1] + "\
+              <br />\
+              " + data[row][2] + "\
+              <br />\
+              " + data[row][3] + "\
+            </div>\
+          </div>";
+        results.append(template);
+      }
+    }
+    results.fadeIn();
+  },
+
+Status API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Contact Help
 
     MapsLib.prototype.addCommas = function (nStr) {
         nStr += '';
